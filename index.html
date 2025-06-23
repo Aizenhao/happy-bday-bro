@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Surprise</title>
+  <style>
+    body {
+      background: #f0e5ec;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+
+    .open-button {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #127fbe;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .paper {
+      width: 320px;
+      height: 0;
+      background: #fff;
+      border: 2px solid #ccc;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: height 1.2s ease, padding 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    .paper.open {
+      height: 420px;
+      padding: 1rem;
+    }
+
+    .message {
+      opacity: 0;
+      overflow-y: auto;
+      max-height: 100%;
+      transition: opacity 1s ease 1.2s;
+      font-size: 1rem;
+      color: #077ae6;
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .message.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+    <h1>HAPPY BIRTHDAY BRO 🎉</h1>
+  <button class="open-button" onclick="openCard()">Open 🎉</button>
+
+  <div class="paper" id="paper">
+    <div class="message" id="message">
+      Hay ton, Happy Birthday brother! You're the best friend everrrrr 😏 It’s so much fun having you as my best friend/friend/homie/brother from another mother. Thank you for all the time you've been with me from grade 3 to grade 10 thank you so, so much, bro.  
+      <br><br>
+      I wish you the best luck with your future. Hope your dreams start lining up like stars. And your relationship with your girlfriend, I hope you guys last long. Wishing you all the love and strength and good health.  
+      <br><br>
+      We can’t change the past, and we can’t predict the future but what we can is holding on to the present. Keep moving forward and getting better day by day, even if you fail, fix it. Don’t ever give up and keep doing what you love.  
+      <br><br>
+      Thank you for being the best friend, bro. Hope we meet again in the future hehehe. Maybe I’ll be your cousin-in-law one day? 😅 Scared of her parents tho, but I’ll try my best hehe.  
+      <br><br>
+      See you again soon, my brother.  
+      <br>—Your boy Hao.
+    </div>
+  </div>
+
+  <script>
+    function openCard() {
+      document.getElementById('paper').classList.add('open');
+      document.getElementById('message').classList.add('show');
+    }
+  </script>
+
+</body>
+</html>
